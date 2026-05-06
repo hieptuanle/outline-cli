@@ -192,7 +192,7 @@ describe('update command', () => {
 
             expect(mockSpawn).toHaveBeenCalledWith(
                 'npm',
-                ['install', '-g', '@doist/outline-cli@latest'],
+                ['install', '-g', '@hieptuanle/outline-cli@latest'],
                 { stdio: ['ignore', 'ignore', 'pipe'], shell: process.platform === 'win32' },
             )
             expect(consoleSpy).toHaveBeenCalledWith(
@@ -211,7 +211,7 @@ describe('update command', () => {
 
             expect(mockSpawn).toHaveBeenCalledWith(
                 'pnpm',
-                ['add', '-g', '@doist/outline-cli@latest'],
+                ['add', '-g', '@hieptuanle/outline-cli@latest'],
                 { stdio: ['ignore', 'ignore', 'pipe'], shell: process.platform === 'win32' },
             )
         })
@@ -288,7 +288,9 @@ describe('update command', () => {
             const program = createProgram()
             await program.parseAsync(['node', 'ol', 'update'])
 
-            expect(fetch).toHaveBeenCalledWith('https://registry.npmjs.org/@doist/outline-cli/next')
+            expect(fetch).toHaveBeenCalledWith(
+                'https://registry.npmjs.org/@hieptuanle/outline-cli/next',
+            )
         })
 
         it('installs with @next tag', async () => {
@@ -300,7 +302,7 @@ describe('update command', () => {
 
             expect(mockSpawn).toHaveBeenCalledWith(
                 'npm',
-                ['install', '-g', '@doist/outline-cli@next'],
+                ['install', '-g', '@hieptuanle/outline-cli@next'],
                 { stdio: ['ignore', 'ignore', 'pipe'], shell: process.platform === 'win32' },
             )
         })
@@ -325,7 +327,9 @@ describe('update command', () => {
             const program = createProgram()
             await program.parseAsync(['node', 'ol', 'update', '--check'])
 
-            expect(fetch).toHaveBeenCalledWith('https://registry.npmjs.org/@doist/outline-cli/next')
+            expect(fetch).toHaveBeenCalledWith(
+                'https://registry.npmjs.org/@hieptuanle/outline-cli/next',
+            )
             expect(mockSpawn).not.toHaveBeenCalled()
         })
 
@@ -350,7 +354,7 @@ describe('update command', () => {
             expect(consoleSpy).toHaveBeenCalledWith(expect.stringContaining('Downgrade available'))
             expect(mockSpawn).toHaveBeenCalledWith(
                 'npm',
-                ['install', '-g', '@doist/outline-cli@next'],
+                ['install', '-g', '@hieptuanle/outline-cli@next'],
                 { stdio: ['ignore', 'ignore', 'pipe'], shell: process.platform === 'win32' },
             )
         })

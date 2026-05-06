@@ -5,7 +5,7 @@ import { withSpinner } from '../../lib/spinner.js'
 import { getUpdateChannel, type UpdateChannel } from '../../lib/update-config.js'
 import { fetchWithRetry } from '../../transport/fetch-with-retry.js'
 
-const PACKAGE_NAME = '@doist/outline-cli'
+const PACKAGE_NAME = '@hieptuanle/outline-cli'
 
 interface RegistryResponse {
     version: string

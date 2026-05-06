@@ -1,22 +1,21 @@
 {
-	"name": "@doist/outline-cli",
+	"name": "@hieptuanle/outline-cli",
 	"version": "1.5.1",
 	"description": "CLI for the Outline wiki/knowledge base API",
 	"type": "module",
 	"bin": {
-		"ol": "./dist/index.js"
+		"ol": "dist/index.js"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Doist/outline-cli.git"
+		"url": "git+https://github.com/hieptuanle/outline-cli.git"
 	},
 	"publishConfig": {
-		"access": "public",
-		"provenance": true
+		"access": "public"
 	},
-	"homepage": "https://github.com/Doist/outline-cli#readme",
+	"homepage": "https://github.com/hieptuanle/outline-cli#readme",
 	"bugs": {
-		"url": "https://github.com/Doist/outline-cli/issues"
+		"url": "https://github.com/hieptuanle/outline-cli/issues"
 	},
 	"files": [
 		"dist",

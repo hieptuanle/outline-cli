@@ -7,7 +7,7 @@ CLI for the [Outline](https://www.getoutline.com) wiki/knowledge base API.
 Requires Node 20.18.1+.
 
 > ```bash
-> npm install -g @doist/outline-cli
+> npm install -g @hieptuanle/outline-cli
 > ```
 
 ### Agent Skills
@@ -41,7 +41,7 @@ ol skill uninstall <agent>
 Then uninstall the CLI:
 
 ```bash
-npm uninstall -g @doist/outline-cli
+npm uninstall -g @hieptuanle/outline-cli
 ```
 
 ## Local Setup
